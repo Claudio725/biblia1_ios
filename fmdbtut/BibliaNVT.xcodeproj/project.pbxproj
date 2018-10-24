@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240167A11E328170002C80DB /* Ajuste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240167A01E328170002C80DB /* Ajuste.swift */; };
+		2401A80B1FA90E5C002F4494 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2401A80A1FA90E5C002F4494 /* CustomTextView.swift */; };
+		2404E8D21E1A80B2006DB179 /* CapitulosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404E8D11E1A80B2006DB179 /* CapitulosCollectionViewCell.swift */; };
+		2404E8D41E1A8116006DB179 /* CapitulosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404E8D31E1A8116006DB179 /* CapitulosCollectionViewController.swift */; };
+		2405875F1E15695E0068462A /* ListaLivrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405875E1E15695E0068462A /* ListaLivrosViewController.swift */; };
+		240A9F9B1E86FF1D00E84A1E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240A9F9A1E86FF1D00E84A1E /* UserNotifications.framework */; };
+		240B8EDC1E3F85D600EB5B57 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B8EDB1E3F85D600EB5B57 /* AjustesViewController.swift */; };
+		240D2C4821222DC700403868 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D2C4721222DC700403868 /* SearchFooter.swift */; };
+		2420BBA51E3D034900F76DD7 /* Cochin.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA01E3D034900F76DD7 /* Cochin.ttc */; };
+		2420BBA61E3D034900F76DD7 /* CochinLTStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA11E3D034900F76DD7 /* CochinLTStd-Bold.otf */; };
+		2420BBA71E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA21E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf */; };
+		2420BBA81E3D034900F76DD7 /* CochinLTStd-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA31E3D034900F76DD7 /* CochinLTStd-Italic.otf */; };
+		2420BBA91E3D034900F76DD7 /* CochinLTStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA41E3D034900F76DD7 /* CochinLTStd.otf */; };
+		2422F4B01E958E270043CAC9 /* BibliaNVT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 249C53721E8EAA56003F8F14 /* BibliaNVT.entitlements */; };
+		2422F4B11E95973C0043CAC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028289F1DA3C09700168A48 /* AppDelegate.swift */; };
+		242B3D8E2099181F00642CE6 /* Brandon_bld_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED11E3F5F5500EB5B57 /* Brandon_bld_it.otf */; };
+		242B3D8F2099182300642CE6 /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED21E3F5F5500EB5B57 /* Brandon_bld.otf */; };
+		242B3D902099182700642CE6 /* Brandon_blk_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED31E3F5F5500EB5B57 /* Brandon_blk_it.otf */; };
+		242B3D912099182B00642CE6 /* Brandon_blk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED41E3F5F5500EB5B57 /* Brandon_blk.otf */; };
+		242B3D922099182F00642CE6 /* Brandon_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED51E3F5F5500EB5B57 /* Brandon_light.otf */; };
+		242B3D932099183300642CE6 /* Brandon_med_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED61E3F5F5500EB5B57 /* Brandon_med_it.otf */; };
+		242B3D942099183600642CE6 /* Brandon_med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED71E3F5F5500EB5B57 /* Brandon_med.otf */; };
+		242B3D952099183A00642CE6 /* Brandon_reg_it.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED81E3F5F5500EB5B57 /* Brandon_reg_it.otf */; };
+		242B3D962099183E00642CE6 /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 240B8ED91E3F5F5500EB5B57 /* Brandon_reg.otf */; };
+		2434E3B81E488925002EA10B /* PlanoLeituraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434E3B71E488925002EA10B /* PlanoLeituraViewController.swift */; };
+		244832781FA1310600DD42D7 /* MarcacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244832771FA1310600DD42D7 /* MarcacaoViewController.swift */; };
+		2448AE1F1E4CEDBB00783491 /* aberturanova.png in Resources */ = {isa = PBXBuildFile; fileRef = 2448AE1E1E4CEDBB00783491 /* aberturanova.png */; };
+		2455D930209799C70051E8D5 /* MCNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455D92F209799C70051E8D5 /* MCNewsViewController.swift */; };
+		245753561E0C25B200FA2102 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457534C1E0C25B200FA2102 /* FMDatabase.m */; };
+		245753571E0C25B200FA2102 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457534E1E0C25B200FA2102 /* FMDatabaseAdditions.m */; };
+		245753581E0C25B200FA2102 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 245753501E0C25B200FA2102 /* FMDatabasePool.m */; };
+		245753591E0C25B200FA2102 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 245753521E0C25B200FA2102 /* FMDatabaseQueue.m */; };
+		2457535A1E0C25B200FA2102 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 245753551E0C25B200FA2102 /* FMResultSet.m */; };
+		2457535C1E0C262400FA2102 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457535B1E0C262400FA2102 /* DBManager.swift */; };
+		246A46EA1FA27D9C006B08FF /* MarcadorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A46E91FA27D9C006B08FF /* MarcadorTableViewController.swift */; };
+		24881B98211B1ECB005EA8E7 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24881B97211B1EC9005EA8E7 /* Mensagem.swift */; };
+		248B15481E8988120034BD3E /* Branch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B15471E8988120034BD3E /* Branch.framework */; };
+		248B154A1E8989080034BD3E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B15491E8989080034BD3E /* AdSupport.framework */; };
+		248B154C1E89891E0034BD3E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B154B1E89891E0034BD3E /* CoreTelephony.framework */; };
+		248B154E1E8989330034BD3E /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B154D1E8989330034BD3E /* CoreSpotlight.framework */; };
+		248B15501E89894F0034BD3E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B154F1E89894F0034BD3E /* MobileCoreServices.framework */; };
+		248B3D261E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B3D251E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift */; };
+		248C6FC81E8F1FFA00BB2A9A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248C6FC71E8F1FFA00BB2A9A /* Bolts.framework */; };
+		248DD0CC2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248DD0CB2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift */; };
+		249884E21E16CB7D00E3183D /* MoviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249884E11E16CB7D00E3183D /* MoviewTableViewCell.swift */; };
+		249884E41E16E78E00E3183D /* DetalheTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249884E31E16E78E00E3183D /* DetalheTableViewController.swift */; };
+		24A33E611E6B3942004F129B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A33E5F1E6B3942004F129B /* FBSDKCoreKit.framework */; };
+		24A33E621E6B3942004F129B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A33E601E6B3942004F129B /* FBSDKLoginKit.framework */; };
+		24A33E641E6B5CDE004F129B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A33E631E6B5CDE004F129B /* FBSDKShareKit.framework */; };
+		24A535DE1E26A8B300F84C6B /* NVTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A535DD1E26A8B300F84C6B /* NVTViewController.swift */; };
+		24A535E11E26B0E300F84C6B /* MundoCristaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A535E01E26B0E300F84C6B /* MundoCristaoViewController.swift */; };
+		24A535E31E26C19900F84C6B /* LojaVirtualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A535E21E26C19900F84C6B /* LojaVirtualViewController.swift */; };
+		24AB05651E129C5F0028AC36 /* PesquisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB05641E129C5F0028AC36 /* PesquisaViewController.swift */; };
+		24BB80E91FBC681B0084AA3E /* ListaHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB80E81FBC681B0084AA3E /* ListaHome.swift */; };
+		24BB80EB1FBC90F40084AA3E /* ListaHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB80EA1FBC90F30084AA3E /* ListaHomeTableViewCell.swift */; };
+		24BDFE0A1E7D894200B81CAB /* SDKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDFE091E7D894200B81CAB /* SDKSettings.swift */; };
+		24BEEFBD1FA3929B0063C1E8 /* MarcadorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BEEFBC1FA3929B0063C1E8 /* MarcadorTableViewCell.swift */; };
+		24C304B51E5742B100F2BABC /* HexUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C304B41E5742B100F2BABC /* HexUIColor.swift */; };
+		24CECCF21E1D2CB100A43AB5 /* ListaVersiculoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CECCF11E1D2CB000A43AB5 /* ListaVersiculoViewController.swift */; };
+		24D1CB321FC3283400824586 /* CalendarCls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1CB311FC3283300824586 /* CalendarCls.swift */; };
+		24D9D81D1E4A4E5E0096944B /* PlanoLeituraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9D81C1E4A4E5D0096944B /* PlanoLeituraTableViewCell.swift */; };
+		24F238F61E1C1AA6009118EC /* VersiculosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F238F51E1C1AA6009118EC /* VersiculosCollectionViewController.swift */; };
+		24F238F81E1C1ACF009118EC /* VersiculosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F238F71E1C1ACF009118EC /* VersiculosCollectionViewCell.swift */; };
+		24F3C0291FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24F3C0281FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite */; };
+		24FB97C01E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB97BF1E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift */; };
+		24FDD7B1216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FDD7B0216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift */; };
+		C02828A51DA3C09700168A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02828A31DA3C09700168A48 /* Main.storyboard */; };
+		C02828A71DA3C09700168A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02828A61DA3C09700168A48 /* Assets.xcassets */; };
+		C02828AA1DA3C09700168A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02828A81DA3C09700168A48 /* LaunchScreen.storyboard */; };
+		C02828B21DA3C0A500168A48 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02828B11DA3C0A500168A48 /* MoviesViewController.swift */; };
+		C02828B61DA3C2DC00168A48 /* movies.tsv in Resources */ = {isa = PBXBuildFile; fileRef = C02828B51DA3C2DC00168A48 /* movies.tsv */; };
+		C0F8EF771DA7C33E00318523 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F8EF761DA7C33E00318523 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		240167A01E328170002C80DB /* Ajuste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ajuste.swift; sourceTree = "<group>"; };
+		2401A80A1FA90E5C002F4494 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		2404E8D11E1A80B2006DB179 /* CapitulosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitulosCollectionViewCell.swift; sourceTree = "<group>"; };
+		2404E8D31E1A8116006DB179 /* CapitulosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitulosCollectionViewController.swift; sourceTree = "<group>"; };
+		2405875E1E15695E0068462A /* ListaLivrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListaLivrosViewController.swift; path = ../ListaLivrosViewController.swift; sourceTree = "<group>"; };
+		240A9F9A1E86FF1D00E84A1E /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		240B8ED11E3F5F5500EB5B57 /* Brandon_bld_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld_it.otf; sourceTree = "<group>"; };
+		240B8ED21E3F5F5500EB5B57 /* Brandon_bld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld.otf; sourceTree = "<group>"; };
+		240B8ED31E3F5F5500EB5B57 /* Brandon_blk_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk_it.otf; sourceTree = "<group>"; };
+		240B8ED41E3F5F5500EB5B57 /* Brandon_blk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_blk.otf; sourceTree = "<group>"; };
+		240B8ED51E3F5F5500EB5B57 /* Brandon_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light.otf; sourceTree = "<group>"; };
+		240B8ED61E3F5F5500EB5B57 /* Brandon_med_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med_it.otf; sourceTree = "<group>"; };
+		240B8ED71E3F5F5500EB5B57 /* Brandon_med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med.otf; sourceTree = "<group>"; };
+		240B8ED81E3F5F5500EB5B57 /* Brandon_reg_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg_it.otf; sourceTree = "<group>"; };
+		240B8ED91E3F5F5500EB5B57 /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
+		240B8EDB1E3F85D600EB5B57 /* AjustesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
+		240D2C4721222DC700403868 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchFooter.swift; path = ../../../../CandySearch_4_Starter/CandySearch/SearchFooter.swift; sourceTree = "<group>"; };
+		2420BBA01E3D034900F76DD7 /* Cochin.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cochin.ttc; sourceTree = "<group>"; };
+		2420BBA11E3D034900F76DD7 /* CochinLTStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CochinLTStd-Bold.otf"; sourceTree = "<group>"; };
+		2420BBA21E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CochinLTStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		2420BBA31E3D034900F76DD7 /* CochinLTStd-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CochinLTStd-Italic.otf"; sourceTree = "<group>"; };
+		2420BBA41E3D034900F76DD7 /* CochinLTStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CochinLTStd.otf; sourceTree = "<group>"; };
+		242CCC0A1EC4B89C007DE325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2434E3B71E488925002EA10B /* PlanoLeituraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanoLeituraViewController.swift; sourceTree = "<group>"; };
+		244832771FA1310600DD42D7 /* MarcacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcacaoViewController.swift; sourceTree = "<group>"; };
+		2448AE1E1E4CEDBB00783491 /* aberturanova.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aberturanova.png; path = "FIGURAS EMAIL MUNDO CRISTAO/Icones MC/aberturanova.png"; sourceTree = "<group>"; };
+		2455D92F209799C70051E8D5 /* MCNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCNewsViewController.swift; sourceTree = "<group>"; };
+		2457534A1E0C25B200FA2102 /* FMDBTut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMDBTut-Bridging-Header.h"; sourceTree = "<group>"; };
+		2457534B1E0C25B200FA2102 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2457534C1E0C25B200FA2102 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2457534D1E0C25B200FA2102 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2457534E1E0C25B200FA2102 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2457534F1E0C25B200FA2102 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		245753501E0C25B200FA2102 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		245753511E0C25B200FA2102 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		245753521E0C25B200FA2102 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		245753531E0C25B200FA2102 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		245753541E0C25B200FA2102 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		245753551E0C25B200FA2102 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2457535B1E0C262400FA2102 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		246A46E91FA27D9C006B08FF /* MarcadorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcadorTableViewController.swift; sourceTree = "<group>"; };
+		24881B97211B1EC9005EA8E7 /* Mensagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
+		248B15471E8988120034BD3E /* Branch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Branch.framework; sourceTree = "<group>"; };
+		248B15491E8989080034BD3E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		248B154B1E89891E0034BD3E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		248B154D1E8989330034BD3E /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		248B154F1E89894F0034BD3E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		248B3D251E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeitorPlanoViewController.swift; sourceTree = "<group>"; };
+		248C6FC71E8F1FFA00BB2A9A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		248DD0CB2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNovaViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		249884E11E16CB7D00E3183D /* MoviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviewTableViewCell.swift; sourceTree = "<group>"; };
+		249884E31E16E78E00E3183D /* DetalheTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheTableViewController.swift; sourceTree = "<group>"; };
+		249C53721E8EAA56003F8F14 /* BibliaNVT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BibliaNVT.entitlements; sourceTree = "<group>"; };
+		24A33E5F1E6B3942004F129B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		24A33E601E6B3942004F129B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		24A33E631E6B5CDE004F129B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		24A33E651E6B69CE004F129B /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		24A535DD1E26A8B300F84C6B /* NVTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVTViewController.swift; sourceTree = "<group>"; };
+		24A535E01E26B0E300F84C6B /* MundoCristaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MundoCristaoViewController.swift; sourceTree = "<group>"; };
+		24A535E21E26C19900F84C6B /* LojaVirtualViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LojaVirtualViewController.swift; sourceTree = "<group>"; };
+		24AB05641E129C5F0028AC36 /* PesquisaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PesquisaViewController.swift; sourceTree = "<group>"; };
+		24BB80E81FBC681B0084AA3E /* ListaHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaHome.swift; sourceTree = "<group>"; };
+		24BB80EA1FBC90F30084AA3E /* ListaHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaHomeTableViewCell.swift; sourceTree = "<group>"; };
+		24BDFE091E7D894200B81CAB /* SDKSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKSettings.swift; sourceTree = "<group>"; };
+		24BEEFBC1FA3929B0063C1E8 /* MarcadorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcadorTableViewCell.swift; sourceTree = "<group>"; };
+		24C304B41E5742B100F2BABC /* HexUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexUIColor.swift; sourceTree = "<group>"; };
+		24CECCF11E1D2CB000A43AB5 /* ListaVersiculoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaVersiculoViewController.swift; sourceTree = "<group>"; };
+		24D1CB311FC3283300824586 /* CalendarCls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCls.swift; sourceTree = "<group>"; };
+		24D9D81C1E4A4E5D0096944B /* PlanoLeituraTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanoLeituraTableViewCell.swift; sourceTree = "<group>"; };
+		24F238F51E1C1AA6009118EC /* VersiculosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersiculosCollectionViewController.swift; sourceTree = "<group>"; };
+		24F238F71E1C1ACF009118EC /* VersiculosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersiculosCollectionViewCell.swift; sourceTree = "<group>"; };
+		24F3C0281FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BIBLIA_NVT_AJUSTADO.sqlite; sourceTree = "<group>"; };
+		24FB97BF1E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanoLeituraMensalViewController.swift; sourceTree = "<group>"; };
+		24FDD7B0216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNovaPlanoViewCell.swift; sourceTree = "<group>"; };
+		C028289C1DA3C09700168A48 /* BibliaNVT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibliaNVT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C028289F1DA3C09700168A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
+		C02828A41DA3C09700168A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C02828A61DA3C09700168A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C02828A91DA3C09700168A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C02828AB1DA3C09700168A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02828B11DA3C0A500168A48 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		C02828B51DA3C2DC00168A48 /* movies.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movies.tsv; sourceTree = "<group>"; };
+		C0F8EF761DA7C33E00318523 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C02828991DA3C09700168A48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				248B15501E89894F0034BD3E /* MobileCoreServices.framework in Frameworks */,
+				248C6FC81E8F1FFA00BB2A9A /* Bolts.framework in Frameworks */,
+				248B154E1E8989330034BD3E /* CoreSpotlight.framework in Frameworks */,
+				248B154C1E89891E0034BD3E /* CoreTelephony.framework in Frameworks */,
+				248B154A1E8989080034BD3E /* AdSupport.framework in Frameworks */,
+				240A9F9B1E86FF1D00E84A1E /* UserNotifications.framework in Frameworks */,
+				24A33E641E6B5CDE004F129B /* FBSDKShareKit.framework in Frameworks */,
+				C0F8EF771DA7C33E00318523 /* libsqlite3.tbd in Frameworks */,
+				24A33E611E6B3942004F129B /* FBSDKCoreKit.framework in Frameworks */,
+				248B15481E8988120034BD3E /* Branch.framework in Frameworks */,
+				24A33E621E6B3942004F129B /* FBSDKLoginKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2401679F1E328113002C80DB /* Classe Ajuste */ = {
+			isa = PBXGroup;
+			children = (
+				240167A01E328170002C80DB /* Ajuste.swift */,
+			);
+			name = "Classe Ajuste";
+			sourceTree = "<group>";
+		};
+		240B8EDA1E3F859D00EB5B57 /* Ajustes */ = {
+			isa = PBXGroup;
+			children = (
+				24C304B41E5742B100F2BABC /* HexUIColor.swift */,
+				240B8EDB1E3F85D600EB5B57 /* AjustesViewController.swift */,
+				24BDFE091E7D894200B81CAB /* SDKSettings.swift */,
+			);
+			name = Ajustes;
+			sourceTree = "<group>";
+		};
+		2420BB9F1E3D01EF00F76DD7 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				24F238F71E1C1ACF009118EC /* VersiculosCollectionViewCell.swift */,
+				2420BBA01E3D034900F76DD7 /* Cochin.ttc */,
+				2420BBA11E3D034900F76DD7 /* CochinLTStd-Bold.otf */,
+				2420BBA21E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf */,
+				2420BBA31E3D034900F76DD7 /* CochinLTStd-Italic.otf */,
+				2420BBA41E3D034900F76DD7 /* CochinLTStd.otf */,
+				240B8ED11E3F5F5500EB5B57 /* Brandon_bld_it.otf */,
+				240B8ED21E3F5F5500EB5B57 /* Brandon_bld.otf */,
+				240B8ED31E3F5F5500EB5B57 /* Brandon_blk_it.otf */,
+				240B8ED41E3F5F5500EB5B57 /* Brandon_blk.otf */,
+				240B8ED51E3F5F5500EB5B57 /* Brandon_light.otf */,
+				240B8ED61E3F5F5500EB5B57 /* Brandon_med_it.otf */,
+				240B8ED71E3F5F5500EB5B57 /* Brandon_med.otf */,
+				240B8ED81E3F5F5500EB5B57 /* Brandon_reg_it.otf */,
+				240B8ED91E3F5F5500EB5B57 /* Brandon_reg.otf */,
+			);
+			name = font;
+			sourceTree = "<group>";
+		};
+		2434E3B61E4888BC002EA10B /* Plano de Leitura anual */ = {
+			isa = PBXGroup;
+			children = (
+				2434E3B71E488925002EA10B /* PlanoLeituraViewController.swift */,
+				24FB97BF1E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift */,
+				24D9D81C1E4A4E5D0096944B /* PlanoLeituraTableViewCell.swift */,
+				248B3D251E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift */,
+				24D1CB311FC3283300824586 /* CalendarCls.swift */,
+				24FDD7B0216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift */,
+			);
+			name = "Plano de Leitura anual";
+			sourceTree = "<group>";
+		};
+		2455D92E209799640051E8D5 /* MCNotícias */ = {
+			isa = PBXGroup;
+			children = (
+				2455D92F209799C70051E8D5 /* MCNewsViewController.swift */,
+			);
+			name = "MCNotícias";
+			sourceTree = "<group>";
+		};
+		2457535D1E0C3B8D00FA2102 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				2457534A1E0C25B200FA2102 /* FMDBTut-Bridging-Header.h */,
+				2457534B1E0C25B200FA2102 /* FMDatabase.h */,
+				2457534C1E0C25B200FA2102 /* FMDatabase.m */,
+				2457534D1E0C25B200FA2102 /* FMDatabaseAdditions.h */,
+				2457534E1E0C25B200FA2102 /* FMDatabaseAdditions.m */,
+				2457534F1E0C25B200FA2102 /* FMDatabasePool.h */,
+				245753501E0C25B200FA2102 /* FMDatabasePool.m */,
+				245753511E0C25B200FA2102 /* FMDatabaseQueue.h */,
+				245753521E0C25B200FA2102 /* FMDatabaseQueue.m */,
+				2457535B1E0C262400FA2102 /* DBManager.swift */,
+				245753531E0C25B200FA2102 /* FMDB.h */,
+				245753541E0C25B200FA2102 /* FMResultSet.h */,
+				245753551E0C25B200FA2102 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		246A46E81FA27CFB006B08FF /* Marcacao */ = {
+			isa = PBXGroup;
+			children = (
+				246A46E91FA27D9C006B08FF /* MarcadorTableViewController.swift */,
+				24BEEFBC1FA3929B0063C1E8 /* MarcadorTableViewCell.swift */,
+			);
+			path = Marcacao;
+			sourceTree = "<group>";
+		};
+		24881B96211B1E6F005EA8E7 /* Classses */ = {
+			isa = PBXGroup;
+			children = (
+				24881B97211B1EC9005EA8E7 /* Mensagem.swift */,
+				240D2C4721222DC700403868 /* SearchFooter.swift */,
+			);
+			name = Classses;
+			sourceTree = "<group>";
+		};
+		24A535DA1E26A13900F84C6B /* NVT */ = {
+			isa = PBXGroup;
+			children = (
+				24A535DD1E26A8B300F84C6B /* NVTViewController.swift */,
+			);
+			name = NVT;
+			sourceTree = "<group>";
+		};
+		24A535DF1E26B09700F84C6B /* Mundo Cristao */ = {
+			isa = PBXGroup;
+			children = (
+				24A535E01E26B0E300F84C6B /* MundoCristaoViewController.swift */,
+			);
+			name = "Mundo Cristao";
+			sourceTree = "<group>";
+		};
+		24A535E41E26C1AF00F84C6B /* Loja Virtual */ = {
+			isa = PBXGroup;
+			children = (
+				24A535E21E26C19900F84C6B /* LojaVirtualViewController.swift */,
+			);
+			name = "Loja Virtual";
+			sourceTree = "<group>";
+		};
+		24BB80E71FBC67B30084AA3E /* Classe ListaHome */ = {
+			isa = PBXGroup;
+			children = (
+				24BB80E81FBC681B0084AA3E /* ListaHome.swift */,
+			);
+			name = "Classe ListaHome";
+			sourceTree = "<group>";
+		};
+		24F238F31E1C096D009118EC /* Busca por LivroCapituloVerso */ = {
+			isa = PBXGroup;
+			children = (
+				2405875E1E15695E0068462A /* ListaLivrosViewController.swift */,
+				2404E8D11E1A80B2006DB179 /* CapitulosCollectionViewCell.swift */,
+				2404E8D31E1A8116006DB179 /* CapitulosCollectionViewController.swift */,
+				24F238F51E1C1AA6009118EC /* VersiculosCollectionViewController.swift */,
+				24CECCF11E1D2CB000A43AB5 /* ListaVersiculoViewController.swift */,
+				244832771FA1310600DD42D7 /* MarcacaoViewController.swift */,
+				2401A80A1FA90E5C002F4494 /* CustomTextView.swift */,
+				248DD0CB2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift */,
+			);
+			name = "Busca por LivroCapituloVerso";
+			sourceTree = "<group>";
+		};
+		24F238F41E1C09FF009118EC /* Busca por Palavra-chave */ = {
+			isa = PBXGroup;
+			children = (
+				C02828B11DA3C0A500168A48 /* MoviesViewController.swift */,
+				249884E11E16CB7D00E3183D /* MoviewTableViewCell.swift */,
+				249884E31E16E78E00E3183D /* DetalheTableViewController.swift */,
+			);
+			name = "Busca por Palavra-chave";
+			sourceTree = "<group>";
+		};
+		C02828931DA3C09700168A48 = {
+			isa = PBXGroup;
+			children = (
+				24F3C0281FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite */,
+				249C53721E8EAA56003F8F14 /* BibliaNVT.entitlements */,
+				2448AE1E1E4CEDBB00783491 /* aberturanova.png */,
+				C028289E1DA3C09700168A48 /* FMDBTut */,
+				C028289D1DA3C09700168A48 /* Products */,
+				C0F8EF751DA7C33E00318523 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C028289D1DA3C09700168A48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C028289C1DA3C09700168A48 /* BibliaNVT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C028289E1DA3C09700168A48 /* FMDBTut */ = {
+			isa = PBXGroup;
+			children = (
+				24881B96211B1E6F005EA8E7 /* Classses */,
+				2455D92E209799640051E8D5 /* MCNotícias */,
+				24BB80E71FBC67B30084AA3E /* Classe ListaHome */,
+				246A46E81FA27CFB006B08FF /* Marcacao */,
+				24A33E651E6B69CE004F129B /* Bridging-Header.h */,
+				2434E3B61E4888BC002EA10B /* Plano de Leitura anual */,
+				240B8EDA1E3F859D00EB5B57 /* Ajustes */,
+				2420BB9F1E3D01EF00F76DD7 /* font */,
+				2401679F1E328113002C80DB /* Classe Ajuste */,
+				24A535E41E26C1AF00F84C6B /* Loja Virtual */,
+				24A535DF1E26B09700F84C6B /* Mundo Cristao */,
+				24A535DA1E26A13900F84C6B /* NVT */,
+				24F238F41E1C09FF009118EC /* Busca por Palavra-chave */,
+				24F238F31E1C096D009118EC /* Busca por LivroCapituloVerso */,
+				2457535D1E0C3B8D00FA2102 /* FMDB */,
+				C028289F1DA3C09700168A48 /* AppDelegate.swift */,
+				24AB05641E129C5F0028AC36 /* PesquisaViewController.swift */,
+				C02828A31DA3C09700168A48 /* Main.storyboard */,
+				C02828A61DA3C09700168A48 /* Assets.xcassets */,
+				C02828A81DA3C09700168A48 /* LaunchScreen.storyboard */,
+				C02828AB1DA3C09700168A48 /* Info.plist */,
+				C02828B51DA3C2DC00168A48 /* movies.tsv */,
+				24BB80EA1FBC90F30084AA3E /* ListaHomeTableViewCell.swift */,
+			);
+			path = FMDBTut;
+			sourceTree = "<group>";
+		};
+		C0F8EF751DA7C33E00318523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				242CCC0A1EC4B89C007DE325 /* UIKit.framework */,
+				248C6FC71E8F1FFA00BB2A9A /* Bolts.framework */,
+				248B154F1E89894F0034BD3E /* MobileCoreServices.framework */,
+				248B154D1E8989330034BD3E /* CoreSpotlight.framework */,
+				248B154B1E89891E0034BD3E /* CoreTelephony.framework */,
+				248B15491E8989080034BD3E /* AdSupport.framework */,
+				248B15471E8988120034BD3E /* Branch.framework */,
+				240A9F9A1E86FF1D00E84A1E /* UserNotifications.framework */,
+				24A33E631E6B5CDE004F129B /* FBSDKShareKit.framework */,
+				C0F8EF761DA7C33E00318523 /* libsqlite3.tbd */,
+				24A33E601E6B3942004F129B /* FBSDKLoginKit.framework */,
+				24A33E5F1E6B3942004F129B /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C028289B1DA3C09700168A48 /* BibliaNVT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C02828AE1DA3C09700168A48 /* Build configuration list for PBXNativeTarget "BibliaNVT" */;
+			buildPhases = (
+				C02828981DA3C09700168A48 /* Sources */,
+				C02828991DA3C09700168A48 /* Frameworks */,
+				C028289A1DA3C09700168A48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BibliaNVT;
+			productName = FMDBTut;
+			productReference = C028289C1DA3C09700168A48 /* BibliaNVT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C02828941DA3C09700168A48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Appcoda;
+				TargetAttributes = {
+					C028289B1DA3C09700168A48 = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C02828971DA3C09700168A48 /* Build configuration list for PBXProject "BibliaNVT" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C02828931DA3C09700168A48;
+			productRefGroup = C028289D1DA3C09700168A48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C028289B1DA3C09700168A48 /* BibliaNVT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C028289A1DA3C09700168A48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242B3D902099182700642CE6 /* Brandon_blk_it.otf in Resources */,
+				2422F4B01E958E270043CAC9 /* BibliaNVT.entitlements in Resources */,
+				242B3D952099183A00642CE6 /* Brandon_reg_it.otf in Resources */,
+				242B3D912099182B00642CE6 /* Brandon_blk.otf in Resources */,
+				2420BBA81E3D034900F76DD7 /* CochinLTStd-Italic.otf in Resources */,
+				242B3D932099183300642CE6 /* Brandon_med_it.otf in Resources */,
+				2420BBA61E3D034900F76DD7 /* CochinLTStd-Bold.otf in Resources */,
+				C02828B61DA3C2DC00168A48 /* movies.tsv in Resources */,
+				C02828AA1DA3C09700168A48 /* LaunchScreen.storyboard in Resources */,
+				24F3C0291FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite in Resources */,
+				242B3D8E2099181F00642CE6 /* Brandon_bld_it.otf in Resources */,
+				242B3D922099182F00642CE6 /* Brandon_light.otf in Resources */,
+				2420BBA71E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf in Resources */,
+				2420BBA51E3D034900F76DD7 /* Cochin.ttc in Resources */,
+				242B3D962099183E00642CE6 /* Brandon_reg.otf in Resources */,
+				242B3D8F2099182300642CE6 /* Brandon_bld.otf in Resources */,
+				2420BBA91E3D034900F76DD7 /* CochinLTStd.otf in Resources */,
+				C02828A71DA3C09700168A48 /* Assets.xcassets in Resources */,
+				242B3D942099183600642CE6 /* Brandon_med.otf in Resources */,
+				2448AE1F1E4CEDBB00783491 /* aberturanova.png in Resources */,
+				C02828A51DA3C09700168A48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C02828981DA3C09700168A48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C304B51E5742B100F2BABC /* HexUIColor.swift in Sources */,
+				240B8EDC1E3F85D600EB5B57 /* AjustesViewController.swift in Sources */,
+				245753581E0C25B200FA2102 /* FMDatabasePool.m in Sources */,
+				24F238F61E1C1AA6009118EC /* VersiculosCollectionViewController.swift in Sources */,
+				2422F4B11E95973C0043CAC9 /* AppDelegate.swift in Sources */,
+				249884E21E16CB7D00E3183D /* MoviewTableViewCell.swift in Sources */,
+				24BB80EB1FBC90F40084AA3E /* ListaHomeTableViewCell.swift in Sources */,
+				24A535DE1E26A8B300F84C6B /* NVTViewController.swift in Sources */,
+				24FDD7B1216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift in Sources */,
+				249884E41E16E78E00E3183D /* DetalheTableViewController.swift in Sources */,
+				2404E8D41E1A8116006DB179 /* CapitulosCollectionViewController.swift in Sources */,
+				2405875F1E15695E0068462A /* ListaLivrosViewController.swift in Sources */,
+				2401A80B1FA90E5C002F4494 /* CustomTextView.swift in Sources */,
+				2434E3B81E488925002EA10B /* PlanoLeituraViewController.swift in Sources */,
+				24BDFE0A1E7D894200B81CAB /* SDKSettings.swift in Sources */,
+				246A46EA1FA27D9C006B08FF /* MarcadorTableViewController.swift in Sources */,
+				245753591E0C25B200FA2102 /* FMDatabaseQueue.m in Sources */,
+				240D2C4821222DC700403868 /* SearchFooter.swift in Sources */,
+				2457535C1E0C262400FA2102 /* DBManager.swift in Sources */,
+				24BEEFBD1FA3929B0063C1E8 /* MarcadorTableViewCell.swift in Sources */,
+				2455D930209799C70051E8D5 /* MCNewsViewController.swift in Sources */,
+				248B3D261E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift in Sources */,
+				24A535E31E26C19900F84C6B /* LojaVirtualViewController.swift in Sources */,
+				24A535E11E26B0E300F84C6B /* MundoCristaoViewController.swift in Sources */,
+				C02828B21DA3C0A500168A48 /* MoviesViewController.swift in Sources */,
+				24BB80E91FBC681B0084AA3E /* ListaHome.swift in Sources */,
+				245753561E0C25B200FA2102 /* FMDatabase.m in Sources */,
+				24FB97C01E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift in Sources */,
+				244832781FA1310600DD42D7 /* MarcacaoViewController.swift in Sources */,
+				24CECCF21E1D2CB100A43AB5 /* ListaVersiculoViewController.swift in Sources */,
+				24AB05651E129C5F0028AC36 /* PesquisaViewController.swift in Sources */,
+				240167A11E328170002C80DB /* Ajuste.swift in Sources */,
+				2457535A1E0C25B200FA2102 /* FMResultSet.m in Sources */,
+				245753571E0C25B200FA2102 /* FMDatabaseAdditions.m in Sources */,
+				24D1CB321FC3283400824586 /* CalendarCls.swift in Sources */,
+				2404E8D21E1A80B2006DB179 /* CapitulosCollectionViewCell.swift in Sources */,
+				24881B98211B1ECB005EA8E7 /* Mensagem.swift in Sources */,
+				248DD0CC2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift in Sources */,
+				24F238F81E1C1ACF009118EC /* VersiculosCollectionViewCell.swift in Sources */,
+				24D9D81D1E4A4E5E0096944B /* PlanoLeituraTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C02828A31DA3C09700168A48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02828A41DA3C09700168A48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C02828A81DA3C09700168A48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C02828A91DA3C09700168A48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C02828AC1DA3C09700168A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Associacao Religiosa Editora Mundo Cristao (3GJTMC6FXL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Associacao Religiosa Editora Mundo Cristao (3GJTMC6FXL)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3GJTMC6FXL;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		C02828AD1DA3C09700168A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Associacao Religiosa Editora Mundo Cristao (3GJTMC6FXL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Associacao Religiosa Editora Mundo Cristao (3GJTMC6FXL)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3GJTMC6FXL;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C02828AF1DA3C09700168A48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = BibliaNVT.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Associacao Religiosa Editora Mundo Cristao (3GJTMC6FXL)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3GJTMC6FXL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FMDBTut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mundocristao.BIBLIANVT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b175ad6-b127-415b-8591-7eb4b4f3e0aa";
+				PROVISIONING_PROFILE_SPECIFIER = BibliaNVTAtual;
+				SWIFT_OBJC_BRIDGING_HEADER = "FMDBTut/FMDBTut-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C02828B01DA3C09700168A48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Associacao Religiosa Editora Mundo Cristao (3GJTMC6FXL)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3GJTMC6FXL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FMDBTut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"MTL_ENABLE_DEBUG_INFO[arch=*]" = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mundocristao.BIBLIANVT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b175ad6-b127-415b-8591-7eb4b4f3e0aa";
+				PROVISIONING_PROFILE_SPECIFIER = BibliaNVTAtual;
+				SWIFT_OBJC_BRIDGING_HEADER = "FMDBTut/FMDBTut-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C02828971DA3C09700168A48 /* Build configuration list for PBXProject "BibliaNVT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02828AC1DA3C09700168A48 /* Debug */,
+				C02828AD1DA3C09700168A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C02828AE1DA3C09700168A48 /* Build configuration list for PBXNativeTarget "BibliaNVT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C02828AF1DA3C09700168A48 /* Debug */,
+				C02828B01DA3C09700168A48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C02828941DA3C09700168A48 /* Project object */;
+}
