@@ -102,7 +102,7 @@ class MarcacaoViewController: UIViewController,UITextFieldDelegate,
             //Nome do Livro capitulo:versiculo
             content.subtitle = nomeCapitulo  + ":" + versiculos_sels
             content.body = titulo.text! //titulo do texto a ser lido
-            content.sound = UNNotificationSound.default()
+            content.sound = UNNotificationSound.default
             //Agenda o trigger para 10 segundos
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
             let request = UNNotificationRequest(identifier: "nvt.marcarVersiculos", content: content, trigger: trigger)

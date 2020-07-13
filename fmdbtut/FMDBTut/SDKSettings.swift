@@ -67,7 +67,7 @@ public struct SDKSettings {
             return FBSDKSettings.clientToken()
         }
         set {
-            FBSDKSettings.setClientToken(clientToken)
+            FBSDKSettings.setClientToken(newValue)
         }
     }
     

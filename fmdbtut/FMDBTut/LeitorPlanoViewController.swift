@@ -81,7 +81,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
         //Preparar a listview
         tblNovaPlano.dataSource = self
         tblNovaPlano.delegate = self
-        tblNovaPlano.rowHeight = UITableViewAutomaticDimension
+        tblNovaPlano.rowHeight = UITableView.automaticDimension
         tblNovaPlano.estimatedRowHeight = 25
         
 
@@ -234,7 +234,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
         {
             if let range1: UITextRange = textView!.tokenizer.rangeEnclosingPosition(textPosition,
                                                                                     with: UITextGranularity.paragraph,
-                                                                                    inDirection: 1)
+                                                                                    inDirection: convertToUITextDirection(1))
             {
                 //Mudar a cor do background do parágrafo selecionado
                 
@@ -255,7 +255,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
                 if (flag ==  true)
                 {
                     //Remove o fundo do paragrafo marcado
-                    string.removeAttribute(NSAttributedStringKey.backgroundColor, range: rangeAnterior)
+                    string.removeAttribute(NSAttributedString.Key.backgroundColor, range: rangeAnterior)
                     textView!.attributedText = string
                     textView!.selectedRange = rangeAnterior
                     
@@ -263,8 +263,8 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
                 }
                 
                 //Atribuir o novo atributo
-                attributes = [NSAttributedStringKey.backgroundColor:UIColor.yellow]
-                string.addAttributes(attributes as! [NSAttributedStringKey : Any] , range: range2)
+                attributes = [NSAttributedString.Key.backgroundColor:UIColor.yellow]
+                string.addAttributes(attributes as! [NSAttributedString.Key : Any] , range: range2)
                 textView!.attributedText = string
                 textView!.selectedRange = range2
                 rangeAnterior = range2
@@ -293,9 +293,9 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
                                                        message: "",
                                                        preferredStyle: .alert)
                     // Change font of the title and message
-                    var titleFont = [NSAttributedStringKey : Any]()
+                    var titleFont = [NSAttributedString.Key : Any]()
                     
-                    titleFont = [ NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont(name: "AmericanTypewriter", size: 18)! ]
+                    titleFont = [ NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont(name: "AmericanTypewriter", size: 18)! ]
                     
                     let attributedTitle = NSMutableAttributedString(string: "SELECIONE SUA OPÇÃO", attributes: titleFont )
                     
@@ -311,16 +311,16 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
                     
                     // Acrescentar ações no menu
                     let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-                    let shareAction = UIAlertAction(title: "Compartilhar", style: UIAlertActionStyle.default,
+                    let shareAction = UIAlertAction(title: "Compartilhar", style: UIAlertAction.Style.default,
                                                     handler: { (action) -> Void in
-                                                        let vc = UIActivityViewController(activityItems: [self.versiculo_marcado],
+                                                        let vc = UIActivityViewController(activityItems: [self.versiculo_marcado as Any],
                                                                                           applicationActivities: nil)
                                                         vc.popoverPresentationController?.sourceView = self.view
-                                                        vc.excludedActivityTypes = [ UIActivityType.airDrop]
+                                                        vc.excludedActivityTypes = [ UIActivity.ActivityType.airDrop]
                                                         //UIActivityType.postToFacebook]
                                                         self.present(vc, animated: true, completion: nil)
                     })
-                    let marcarAction = UIAlertAction(title: "Marcar", style: UIAlertActionStyle.default,
+                    let marcarAction = UIAlertAction(title: "Marcar", style: UIAlertAction.Style.default,
                                                      handler: { (action) -> Void in
                                                         self.performSegue(withIdentifier: "marcacaopeloplano", sender: self)
                     })
@@ -585,16 +585,16 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
         let tamanhoMenor: CGFloat! = CGFloat(Double(tamanhoGenerico)!-1)
         let tamanhoMaior: CGFloat! = CGFloat(Double(tamanhoGenerico)!)
         
-        let yourAttributes = [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corNumero),
-                              NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
+        let yourAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corNumero),
+                              NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
         
-        let yourOtherAttributes = [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corLetras),
-                                   NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMaior) ]
+        let yourOtherAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corLetras),
+                                   NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMaior) ]
         
         for v in versiculoSel {
             let partOne = NSMutableAttributedString(string: String(v.verse)
-                + " ", attributes: yourAttributes as Any as? [NSAttributedStringKey : Any] )
-            let partTwo = NSMutableAttributedString(string: String(v.texto), attributes: yourOtherAttributes as Any as? [NSAttributedStringKey : Any])
+                + " ", attributes: yourAttributes as Any as? [NSAttributedString.Key : Any] )
+            let partTwo = NSMutableAttributedString(string: String(v.texto), attributes: yourOtherAttributes as Any as? [NSAttributedString.Key : Any])
             let partTres = NSMutableAttributedString(string: "\n\n", attributes: nil)
             
             combination.append(partOne)
@@ -607,7 +607,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
         paragraphStyle.lineHeightMultiple = 1
         
         let attString: NSMutableAttributedString = combination
-        attString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
+        attString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
         
         textView.attributedText! = attString
         
@@ -645,20 +645,20 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
             fundo_bg = fundo_default
         }
         
-        let yourAttributes = [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corNumero),
-                              NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
+        let yourAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corNumero),
+                              NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
         
         let yourOtherAttributes  =
-            [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corLetras),
-             NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMaior)! ]
+            [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corLetras),
+             NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMaior)! ]
         
         
         //for v in versiculoSel {
         let partOne = NSMutableAttributedString(string: String(verso) + " "
-            , attributes: (yourAttributes as Any as! [NSAttributedStringKey : Any]))
+            , attributes: (yourAttributes as Any as! [NSAttributedString.Key : Any]))
         
         let partTwo = NSMutableAttributedString(string: title,
-                                                attributes: (yourOtherAttributes as Any as! [NSAttributedStringKey : Any]))
+                                                attributes: (yourOtherAttributes as Any as! [NSAttributedString.Key : Any]))
         
         let partTres = NSMutableAttributedString(string: "\n", attributes: nil)
         
@@ -675,7 +675,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
         paragraphStyle.lineHeightMultiple = 1
         
         let attString: NSMutableAttributedString! = combination
-        attString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
+        attString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle as Any, range:NSMakeRange(0, attString.length))
         
         return attString
     }
@@ -705,7 +705,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
     
     // UITableViewAutomaticDimension calculates height of label contents/text
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -731,7 +731,7 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
             
             if (versiculo_marcacao != nil) {
                 //Remove o elemento do array
-                if let index = versiculos_selecionados_tblnova.index(
+                if let index = versiculos_selecionados_tblnova.firstIndex(
                     of: Int32(versiculoSel[(indexPath.row)].verse)!) {
                     versiculos_selecionados_tblnova.remove(at: index)
                     //self.stackView_c.isHidden = true
@@ -761,11 +761,11 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
             versiculo_marcado_segue = versiculo_marcado
             //stackView_c.isHidden = true
             
-            let vc = UIActivityViewController(activityItems: [self.versiculo_marcado],
+            let vc = UIActivityViewController(activityItems: [self.versiculo_marcado as Any],
                                               applicationActivities: nil)
             
             vc.popoverPresentationController?.sourceView = self.view
-            vc.excludedActivityTypes = [ UIActivityType.airDrop]
+            vc.excludedActivityTypes = [ UIActivity.ActivityType.airDrop]
             
             self.present(vc, animated: true, completion: nil)
         }
@@ -846,4 +846,9 @@ UITableViewDataSource,UITableViewDelegate, Mensagem{
         }
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUITextDirection(_ input: Int) -> UITextDirection {
+	return UITextDirection(rawValue: input)
 }

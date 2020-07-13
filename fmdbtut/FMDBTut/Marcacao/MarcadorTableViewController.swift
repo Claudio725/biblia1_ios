@@ -130,10 +130,10 @@ class MarcadorTableViewController: UITableViewController, Mensagem{
                 "Bíblia Sagrada, Nova Versão Transformadora\n" +
                 "Copyright © 2016 por Editora Mundo Cristão.\n" +
                 "Todos os direitos reservados.\n"
-                let vc = UIActivityViewController(activityItems: [versiculo_marcado],
+            let vc = UIActivityViewController(activityItems: [versiculo_marcado as Any],
                                               applicationActivities: nil)
                 vc.popoverPresentationController?.sourceView = self.view
-                vc.excludedActivityTypes = [ UIActivityType.airDrop]
+                vc.excludedActivityTypes = [ UIActivity.ActivityType.airDrop]
                 self.present(vc, animated: true, completion: nil)
 
         }

@@ -31,7 +31,7 @@ class AjustesViewController: UIViewController,
         meuPicker.delegate = self
         
         //Ler as preferencias do sistema e mostrar a configuraçào
-        var vetorPreferencias: [PreferenciasSistema]! = DBManager.shared.preferenciasSistema()!
+        let vetorPreferencias: [PreferenciasSistema]! = DBManager.shared.preferenciasSistema()!
         let fonteGenerica: String = vetorPreferencias[0].FonteNome!
         let tamanhoGenerico: String = vetorPreferencias[0].FonteTamanho!
         if (vetorPreferencias[0].FundoNoturno == nil) {
@@ -47,7 +47,7 @@ class AjustesViewController: UIViewController,
         slider.value = Float(Double(tamanhoGenerico)!)
 
         switchFundoNoturno.addTarget(self, action: #selector(switchIsChanged),
-                                     for: UIControlEvents.valueChanged)
+                                     for: UIControl.Event.valueChanged)
         
         if (fundoNoturnoSalvar == "SIM") {
             switchFundoNoturno.setOn(true, animated: true)
@@ -68,9 +68,9 @@ class AjustesViewController: UIViewController,
         
         guard let tamanho_r = lblTamanho.text else { return }
         let tt = Double(tamanho_r)!
-        let fonteNovo = NSAttributedString(string: fonteEscolhido!, attributes: [NSAttributedStringKey.font:UIFont(name: fonteEscolhido, size: CGFloat(tt))!,NSAttributedStringKey.foregroundColor:UIColor.black])
+        let fonteNovo = NSAttributedString(string: fonteEscolhido!, attributes: [NSAttributedString.Key.font:UIFont(name: fonteEscolhido, size: CGFloat(tt))!,NSAttributedString.Key.foregroundColor:UIColor.black])
         lblFonte!.attributedText = fonteNovo
-        let NovoTamanho = NSAttributedString(string: String(Int(slider.value)), attributes: [NSAttributedStringKey.font:UIFont(name: fonteEscolhido, size: CGFloat(tt))!,NSAttributedStringKey.foregroundColor:UIColor.black])
+        let NovoTamanho = NSAttributedString(string: String(Int(slider.value)), attributes: [NSAttributedString.Key.font:UIFont(name: fonteEscolhido, size: CGFloat(tt))!,NSAttributedString.Key.foregroundColor:UIColor.black])
         lblTamanho.attributedText = NovoTamanho
     }
 
@@ -103,7 +103,7 @@ class AjustesViewController: UIViewController,
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = dadosPicker[row].Nome
-        let myTitle = NSAttributedString(string: titleData!, attributes: [NSAttributedStringKey.font:UIFont(name: "Georgia", size: 15.0)!,NSAttributedStringKey.foregroundColor:UIColor.blue])
+        let myTitle = NSAttributedString(string: titleData!, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 15.0)!,NSAttributedString.Key.foregroundColor:UIColor.blue])
         return myTitle
     }
     
@@ -119,7 +119,7 @@ class AjustesViewController: UIViewController,
             pickerLabel?.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         }
         let titleData = dadosPicker[row].Nome
-        let myTitle = NSAttributedString(string: titleData!, attributes: [NSAttributedStringKey.font:UIFont(name: "Georgia", size: 19.0)!,NSAttributedStringKey.foregroundColor:UIColor.black])
+        let myTitle = NSAttributedString(string: titleData!, attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 19.0)!,NSAttributedString.Key.foregroundColor:UIColor.black])
         pickerLabel!.attributedText = myTitle
         pickerLabel!.textAlignment = .center
         

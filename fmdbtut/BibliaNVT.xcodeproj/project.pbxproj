@@ -14,7 +14,6 @@
 		2405875F1E15695E0068462A /* ListaLivrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405875E1E15695E0068462A /* ListaLivrosViewController.swift */; };
 		240A9F9B1E86FF1D00E84A1E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240A9F9A1E86FF1D00E84A1E /* UserNotifications.framework */; };
 		240B8EDC1E3F85D600EB5B57 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B8EDB1E3F85D600EB5B57 /* AjustesViewController.swift */; };
-		240D2C4821222DC700403868 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240D2C4721222DC700403868 /* SearchFooter.swift */; };
 		2420BBA51E3D034900F76DD7 /* Cochin.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA01E3D034900F76DD7 /* Cochin.ttc */; };
 		2420BBA61E3D034900F76DD7 /* CochinLTStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA11E3D034900F76DD7 /* CochinLTStd-Bold.otf */; };
 		2420BBA71E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2420BBA21E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf */; };
@@ -47,7 +46,6 @@
 		248B154A1E8989080034BD3E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B15491E8989080034BD3E /* AdSupport.framework */; };
 		248B154C1E89891E0034BD3E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B154B1E89891E0034BD3E /* CoreTelephony.framework */; };
 		248B154E1E8989330034BD3E /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B154D1E8989330034BD3E /* CoreSpotlight.framework */; };
-		248B15501E89894F0034BD3E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248B154F1E89894F0034BD3E /* MobileCoreServices.framework */; };
 		248B3D261E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248B3D251E4E18BA00D4E5D7 /* LeitorPlanoViewController.swift */; };
 		248C6FC81E8F1FFA00BB2A9A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248C6FC71E8F1FFA00BB2A9A /* Bolts.framework */; };
 		248DD0CC2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248DD0CB2088FA1800E150D8 /* TableNovaViewCellTableViewCell.swift */; };
@@ -73,6 +71,9 @@
 		24F3C0291FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 24F3C0281FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite */; };
 		24FB97C01E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB97BF1E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift */; };
 		24FDD7B1216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FDD7B0216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift */; };
+		AA3C7BCF247C30100066307B /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3C7BCE247C30100066307B /* CoreServices.framework */; };
+		AA3C7BD1247C335E0066307B /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C7BD0247C335E0066307B /* SearchFooter.swift */; };
+		AA7F555D247BF5950067E4C4 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F555C247BF5950067E4C4 /* SearchFooter.swift */; };
 		C02828A51DA3C09700168A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02828A31DA3C09700168A48 /* Main.storyboard */; };
 		C02828A71DA3C09700168A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02828A61DA3C09700168A48 /* Assets.xcassets */; };
 		C02828AA1DA3C09700168A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02828A81DA3C09700168A48 /* LaunchScreen.storyboard */; };
@@ -98,7 +99,6 @@
 		240B8ED81E3F5F5500EB5B57 /* Brandon_reg_it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg_it.otf; sourceTree = "<group>"; };
 		240B8ED91E3F5F5500EB5B57 /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
 		240B8EDB1E3F85D600EB5B57 /* AjustesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
-		240D2C4721222DC700403868 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchFooter.swift; path = ../../../../CandySearch_4_Starter/CandySearch/SearchFooter.swift; sourceTree = "<group>"; };
 		2420BBA01E3D034900F76DD7 /* Cochin.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cochin.ttc; sourceTree = "<group>"; };
 		2420BBA11E3D034900F76DD7 /* CochinLTStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CochinLTStd-Bold.otf"; sourceTree = "<group>"; };
 		2420BBA21E3D034900F76DD7 /* CochinLTStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CochinLTStd-BoldItalic.otf"; sourceTree = "<group>"; };
@@ -156,6 +156,9 @@
 		24F3C0281FA3F51900E405D9 /* BIBLIA_NVT_AJUSTADO.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BIBLIA_NVT_AJUSTADO.sqlite; sourceTree = "<group>"; };
 		24FB97BF1E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanoLeituraMensalViewController.swift; sourceTree = "<group>"; };
 		24FDD7B0216BB40200B3D4D3 /* TableNovaPlanoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNovaPlanoViewCell.swift; sourceTree = "<group>"; };
+		AA3C7BCE247C30100066307B /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		AA3C7BD0247C335E0066307B /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
+		AA7F555C247BF5950067E4C4 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		C028289C1DA3C09700168A48 /* BibliaNVT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibliaNVT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C028289F1DA3C09700168A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		C02828A41DA3C09700168A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,13 +175,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248B15501E89894F0034BD3E /* MobileCoreServices.framework in Frameworks */,
 				248C6FC81E8F1FFA00BB2A9A /* Bolts.framework in Frameworks */,
 				248B154E1E8989330034BD3E /* CoreSpotlight.framework in Frameworks */,
 				248B154C1E89891E0034BD3E /* CoreTelephony.framework in Frameworks */,
 				248B154A1E8989080034BD3E /* AdSupport.framework in Frameworks */,
 				240A9F9B1E86FF1D00E84A1E /* UserNotifications.framework in Frameworks */,
 				24A33E641E6B5CDE004F129B /* FBSDKShareKit.framework in Frameworks */,
+				AA3C7BCF247C30100066307B /* CoreServices.framework in Frameworks */,
 				C0F8EF771DA7C33E00318523 /* libsqlite3.tbd in Frameworks */,
 				24A33E611E6B3942004F129B /* FBSDKCoreKit.framework in Frameworks */,
 				248B15481E8988120034BD3E /* Branch.framework in Frameworks */,
@@ -253,6 +256,7 @@
 		2457535D1E0C3B8D00FA2102 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				AA7F555C247BF5950067E4C4 /* SearchFooter.swift */,
 				2457534A1E0C25B200FA2102 /* FMDBTut-Bridging-Header.h */,
 				2457534B1E0C25B200FA2102 /* FMDatabase.h */,
 				2457534C1E0C25B200FA2102 /* FMDatabase.m */,
@@ -283,7 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				24881B97211B1EC9005EA8E7 /* Mensagem.swift */,
-				240D2C4721222DC700403868 /* SearchFooter.swift */,
+				AA3C7BD0247C335E0066307B /* SearchFooter.swift */,
 			);
 			name = Classses;
 			sourceTree = "<group>";
@@ -398,6 +402,7 @@
 		C0F8EF751DA7C33E00318523 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA3C7BCE247C30100066307B /* CoreServices.framework */,
 				242CCC0A1EC4B89C007DE325 /* UIKit.framework */,
 				248C6FC71E8F1FFA00BB2A9A /* Bolts.framework */,
 				248B154F1E89894F0034BD3E /* MobileCoreServices.framework */,
@@ -441,12 +446,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Appcoda;
 				TargetAttributes = {
 					C028289B1DA3C09700168A48 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -467,7 +472,7 @@
 			};
 			buildConfigurationList = C02828971DA3C09700168A48 /* Build configuration list for PBXProject "BibliaNVT" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -536,7 +541,6 @@
 				24BDFE0A1E7D894200B81CAB /* SDKSettings.swift in Sources */,
 				246A46EA1FA27D9C006B08FF /* MarcadorTableViewController.swift in Sources */,
 				245753591E0C25B200FA2102 /* FMDatabaseQueue.m in Sources */,
-				240D2C4821222DC700403868 /* SearchFooter.swift in Sources */,
 				2457535C1E0C262400FA2102 /* DBManager.swift in Sources */,
 				24BEEFBD1FA3929B0063C1E8 /* MarcadorTableViewCell.swift in Sources */,
 				2455D930209799C70051E8D5 /* MCNewsViewController.swift in Sources */,
@@ -547,6 +551,8 @@
 				24BB80E91FBC681B0084AA3E /* ListaHome.swift in Sources */,
 				245753561E0C25B200FA2102 /* FMDatabase.m in Sources */,
 				24FB97C01E48D0AA00BF3187 /* PlanoLeituraMensalViewController.swift in Sources */,
+				AA7F555D247BF5950067E4C4 /* SearchFooter.swift in Sources */,
+				AA3C7BD1247C335E0066307B /* SearchFooter.swift in Sources */,
 				244832781FA1310600DD42D7 /* MarcacaoViewController.swift in Sources */,
 				24CECCF21E1D2CB100A43AB5 /* ListaVersiculoViewController.swift in Sources */,
 				24AB05651E129C5F0028AC36 /* PesquisaViewController.swift in Sources */,
@@ -635,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -691,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -724,7 +730,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "FMDBTut/FMDBTut-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -752,7 +758,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = BibliaNVTAtual;
 				SWIFT_OBJC_BRIDGING_HEADER = "FMDBTut/FMDBTut-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

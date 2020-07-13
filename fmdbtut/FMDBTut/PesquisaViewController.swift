@@ -396,8 +396,6 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        //signupWithFacebook()
 
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -469,8 +467,8 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
             
             //Mostra o texto do versículo do dia - texto
             versiculoDoDia.text = "VERSÍCULO DO DIA\n\n" +
-                versoFinal[0].text + "\n\n" +
-                titulo
+                titulo + "\n\n" +
+                versoFinal[0].text
             
         
         } else {
@@ -497,8 +495,8 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
             
             //Mostra o texto do versículo do dia - texto
             versiculoDoDia.text = "VERSÍCULO DO DIA\n\n" +
-                versoFinal[0].text + "\n\n" +
-                titulo
+                titulo + "\n\n" +
+                versoFinal[0].text
 
         }
         
@@ -540,11 +538,10 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
         if marcacao != nil {
             if marcacao.count > 0 {
                 textoLista! = "VOCÊ TEM UM VERSÍCULO MARCADO!\n\n" +
-                    marcacao[0].texto + "\n\n" +
                     marcacao[0].livroNome + " " +
                     marcacao[0].capítulo + ":" +
-                    marcacao[0].verse
-                
+                    marcacao[0].verse + "\n\n" +
+                    marcacao[0].texto
                 
                 livroTM! = marcacao[0].livroID
                 capituloM = marcacao[0].capítulo
@@ -589,7 +586,7 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
         
         // Enable Self Sizing Cells
         tblLista.estimatedRowHeight = 120.0
-        tblLista.rowHeight = UITableViewAutomaticDimension
+        tblLista.rowHeight = UITableView.automaticDimension
         
         self.tblLista.delegate = self
         self.tblLista.dataSource = self
@@ -611,7 +608,7 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
             let vc = UIActivityViewController(activityItems: [versiculo_marcado],
                                               applicationActivities: nil)
             vc.popoverPresentationController?.sourceView = self.view
-            vc.excludedActivityTypes = [ UIActivityType.airDrop]
+            vc.excludedActivityTypes = [ UIActivity.ActivityType.airDrop]
             self.present(vc, animated: true, completion: nil)
             
         }
@@ -641,7 +638,7 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
         frame.size.height = contentSize.height
         self.versiculoDoDia.frame = frame
         
-        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.versiculoDoDia, attribute: .height, relatedBy: .equal, toItem: self.versiculoDoDia, attribute: .width, multiplier: versiculoDoDia.bounds.height/versiculoDoDia.bounds.width, constant: 1)
+        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.versiculoDoDia as Any, attribute: .height, relatedBy: .equal, toItem: self.versiculoDoDia, attribute: .width, multiplier: versiculoDoDia.bounds.height/versiculoDoDia.bounds.width, constant: 1)
         self.versiculoDoDia.addConstraint(aspectRatioTextViewConstraint)
     }
 
@@ -659,7 +656,7 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
             performSegue(withIdentifier: "showVersiculo", sender: self)
         } else {
             let alert = UIAlertController(title: "Bíblia NVT!", message: "Digite a palavra desejada.", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
                 (_)in
             })
             
@@ -856,7 +853,7 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
     }
     
     func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
-        print(error)
+        print(error as Any)
     }
     
     func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
@@ -985,7 +982,7 @@ class PesquisaViewController: UIViewController,UITextFieldDelegate,
             self.performSegue(withIdentifier: "mcnoticias", sender: nil)
             
         }
-        print(linhaSelected)
+        print(linhaSelected as Any)
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

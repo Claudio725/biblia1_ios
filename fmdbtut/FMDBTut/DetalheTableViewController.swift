@@ -151,9 +151,9 @@ class DetalheTableViewController: UIViewController,MFMailComposeViewControllerDe
         let combination : NSMutableAttributedString! = NSMutableAttributedString()
         let tamanhoMaior: CGFloat! = CGFloat(Double(fontSizeR)!)
         let yourOtherAttributesBG =
-            [NSAttributedStringKey.foregroundColor: UIColor.white,
-             NSAttributedStringKey.font: UIFont(name: fontNameR, size: tamanhoMaior)!,
-             NSAttributedStringKey.backgroundColor: UIColor.colorWithHexString("#b5a744")]
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             NSAttributedString.Key.font: UIFont(name: fontNameR, size: tamanhoMaior)!,
+             NSAttributedString.Key.backgroundColor: UIColor.colorWithHexString("#b5a744")]
                 //UIColor(red: 181/255, green: 167/255, blue: 68/255, alpha: 1.0) /* #b5a744 */]
         
         let partTwoBG = NSMutableAttributedString(string: String(texto.text),
@@ -167,7 +167,7 @@ class DetalheTableViewController: UIViewController,MFMailComposeViewControllerDe
         
         let attString: NSMutableAttributedString! = combination
         
-        attString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
+        attString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
 
         texto?.attributedText = attString
         
@@ -290,7 +290,7 @@ class DetalheTableViewController: UIViewController,MFMailComposeViewControllerDe
         frame.size.height = contentSize.height
         self.texto.frame = frame
         
-        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.texto, attribute: .height, relatedBy: .equal, toItem: self.texto, attribute: .width, multiplier: texto.bounds.height/texto.bounds.width, constant: 1)
+        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.texto as Any, attribute: .height, relatedBy: .equal, toItem: self.texto, attribute: .width, multiplier: texto.bounds.height/texto.bounds.width, constant: 1)
         self.texto.addConstraint(aspectRatioTextViewConstraint)
     }
     
@@ -373,7 +373,7 @@ class DetalheTableViewController: UIViewController,MFMailComposeViewControllerDe
     }
     
     func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
-        print(error)
+        print(error as Any)
     }
     
     func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {

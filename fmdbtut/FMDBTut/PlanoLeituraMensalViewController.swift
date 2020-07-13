@@ -355,7 +355,7 @@ class PlanoLeituraMensalViewController: UIViewController, UITableViewDelegate,UI
         //Posicionar no dia selecionado
         if (diaEscolhido != nil) {
             let indexPath = NSIndexPath(item: Int(diaEscolhido)!, section: 0)
-            tblDia.scrollToRow(at: indexPath as IndexPath, at: UITableViewScrollPosition.middle, animated: true)
+            tblDia.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.middle, animated: true)
         }
         
         title = nomeMes

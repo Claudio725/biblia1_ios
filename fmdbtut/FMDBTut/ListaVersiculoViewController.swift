@@ -123,7 +123,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         
         tblNova.dataSource = self
         tblNova.delegate = self
-        tblNova.rowHeight = UITableViewAutomaticDimension
+        tblNova.rowHeight = UITableView.automaticDimension
         tblNova.estimatedRowHeight = 25
         
         //Rotina para fazer a rolagem do texto até o versículo escolhido
@@ -145,7 +145,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         //Mostrar no topo o Livro, Capítulo e Versículo - Negrito
         let attributedString : NSMutableAttributedString! = NSMutableAttributedString(string:String(describing: nomeCapituloVersiculo))
         
-        let attrs = [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 17)]
+        let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
         let boldString = NSMutableAttributedString(string:String(describing: nomeCapituloVersiculo), attributes:attrs)
         
         attributedString.append(boldString)
@@ -225,10 +225,10 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         tapGestureSimples.numberOfTapsRequired = 1
         textView!.addGestureRecognizer(tapGestureSimples)
         
-        view.bringSubview(toFront: btnProximoCapitulo)
-        view.bringSubview(toFront: btnAnteriorCapitulo)
-        view.bringSubview(toFront: btnMarcar)
-        view.bringSubview(toFront: btnCompartilhar)
+        view.bringSubviewToFront(btnProximoCapitulo)
+        view.bringSubviewToFront(btnAnteriorCapitulo)
+        view.bringSubviewToFront(btnMarcar)
+        view.bringSubviewToFront(btnCompartilhar)
         stackView_c.sizeToFit()
         stackView_c.addBackground(color: UIColor.colorWithHexString("#E9FFE9"))
         tblNova.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
@@ -260,7 +260,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
 
     // UITableViewAutomaticDimension calculates height of label contents/text
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -286,7 +286,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
 
             if (versiculo_marcacao != nil) {
                 //Remove o elemento do array
-                if let index = versiculos_selecionados_tblnova.index(
+                if let index = versiculos_selecionados_tblnova.firstIndex(
                     of: Int32(versiculoSel[(indexPath.row)].verso)) {
                     versiculos_selecionados_tblnova.remove(at: index)
                     //self.stackView_c.isHidden = true
@@ -317,11 +317,11 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
             versiculo_marcado_segue = versiculo_marcado
             //stackView_c.isHidden = true
             
-            let vc = UIActivityViewController(activityItems: [self.versiculo_marcado],
+            let vc = UIActivityViewController(activityItems: [self.versiculo_marcado as Any],
                                               applicationActivities: nil)
             
             vc.popoverPresentationController?.sourceView = self.view
-            vc.excludedActivityTypes = [ UIActivityType.airDrop]
+            vc.excludedActivityTypes = [ UIActivity.ActivityType.airDrop]
             
             self.present(vc, animated: true, completion: nil)
         }
@@ -427,20 +427,20 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
             fundo_bg = fundo_default
         }
 
-        let yourAttributes = [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corNumero),
-                          NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
+        let yourAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corNumero),
+                          NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
     
         let yourOtherAttributes  =
-        [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corLetras),
-         NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMaior)! ]
+        [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corLetras),
+         NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMaior)! ]
 
         
         //for v in versiculoSel {
         let partOne = NSMutableAttributedString(string: String(verso) + " "
-            , attributes: (yourAttributes as Any as! [NSAttributedStringKey : Any]))
+            , attributes: (yourAttributes as Any as! [NSAttributedString.Key : Any]))
             
         let partTwo = NSMutableAttributedString(string: title,
-                                                attributes: (yourOtherAttributes as Any as! [NSAttributedStringKey : Any]))
+                                                attributes: (yourOtherAttributes as Any as! [NSAttributedString.Key : Any]))
         
         let partTres = NSMutableAttributedString(string: "\n", attributes: nil)
         
@@ -457,7 +457,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         paragraphStyle.lineHeightMultiple = 1
         
         let attString: NSMutableAttributedString! = combination
-        attString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
+        attString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle as Any, range:NSMakeRange(0, attString.length))
         
         return attString
     }
@@ -499,7 +499,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         {
             if let range1: UITextRange = textView!.tokenizer.rangeEnclosingPosition(textPosition,
                                                       with: UITextGranularity.paragraph,
-                                                      inDirection: 1)
+                                                      inDirection: convertToUITextDirection(1))
             {
                 //Mudar a cor do background do parágrafo selecionado
                 
@@ -520,7 +520,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
                 if (flag ==  true)
                 {
                     //Remove o fundo do paragrafo marcado
-                    string.removeAttribute(NSAttributedStringKey.backgroundColor, range: rangeAnterior)
+                    string.removeAttribute(NSAttributedString.Key.backgroundColor, range: rangeAnterior)
                     textView!.attributedText = string
                     textView!.selectedRange = rangeAnterior
 
@@ -528,8 +528,8 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
                 }
                 
                 //Atribuir o novo atributo
-                attributes = [NSAttributedStringKey.backgroundColor:UIColor.yellow]
-                string.addAttributes(attributes as! [NSAttributedStringKey : Any] , range: range2)
+                attributes = [NSAttributedString.Key.backgroundColor:UIColor.yellow]
+                string.addAttributes(attributes as! [NSAttributedString.Key : Any] , range: range2)
                 textView!.attributedText = string
                 textView!.selectedRange = range2
                 rangeAnterior = range2
@@ -556,9 +556,9 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
                                                   message: "",
                                                   preferredStyle: .alert)
                     // Change font of the title and message
-                    var titleFont = [NSAttributedStringKey : Any]()
+                    var titleFont = [NSAttributedString.Key : Any]()
                     
-                    titleFont = [ NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont(name: "AmericanTypewriter", size: 18)! ]
+                    titleFont = [ NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue) : UIFont(name: "AmericanTypewriter", size: 18)! ]
 
                     let attributedTitle = NSMutableAttributedString(string: "SELECIONE SUA OPÇÃO", attributes: titleFont )
 
@@ -574,16 +574,16 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
                     
                     // Acrescentar ações no menu
                     let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-                    let shareAction = UIAlertAction(title: "Compartilhar", style: UIAlertActionStyle.default,
+                    let shareAction = UIAlertAction(title: "Compartilhar", style: UIAlertAction.Style.default,
                                     handler: { (action) -> Void in
-                                        let vc = UIActivityViewController(activityItems: [self.versiculo_marcado],
+                                        let vc = UIActivityViewController(activityItems: [self.versiculo_marcado as Any],
                                               applicationActivities: nil)
                                         vc.popoverPresentationController?.sourceView = self.view
-                                        vc.excludedActivityTypes = [ UIActivityType.airDrop]
+                                        vc.excludedActivityTypes = [ UIActivity.ActivityType.airDrop]
                                                                      //UIActivityType.postToFacebook]
                                     self.present(vc, animated: true, completion: nil)
                     })
-                    let marcarAction = UIAlertAction(title: "Marcar", style: UIAlertActionStyle.default,
+                    let marcarAction = UIAlertAction(title: "Marcar", style: UIAlertAction.Style.default,
                                  handler: { (action) -> Void in
                                 self.performSegue(withIdentifier: "marcacao", sender: self)
                     })
@@ -766,8 +766,8 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         let tamanhoMenor: CGFloat! = CGFloat(Double(tamanhoGenerico)!-4)
         
         if range.location != NSNotFound {
-            string.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: range)
-            string.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: tamanhoMenor), range: range)
+            string.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: range)
+            string.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: tamanhoMenor), range: range)
             //string.addAttribute(NSFontAttributeName, value:  UIFont(name: "Kailasa", size: 17.0)!,
             //                    range: range)
 
@@ -886,7 +886,7 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
             //Subtrai o capitulo em 1 e converte para string
             let capituloInt: Int = Int(capitulo)! - 1
             capitulo_test = try convertIntToString(capit: capituloInt)
-            print( capitulo_test )
+            print( capitulo_test as Any )
         } catch { //pega qualquer exceção não especificada anteriormente
             //faz algo aqui
             print("Erro na variavel capitulo")
@@ -984,27 +984,27 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         let tamanhoMenor: CGFloat! = CGFloat(Double(tamanhoGenerico)!-4)
         let tamanhoMaior: CGFloat! = CGFloat(Double(tamanhoGenerico)!)
 
-        let yourAttributes = [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corNumero),
-                              NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
+        let yourAttributes = [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corNumero),
+                              NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMenor)]
         
         let yourOtherAttributes  =
-            [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corLetras),
-             NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMaior)! ]
+            [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corLetras),
+             NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMaior)! ]
         
 
         
         let yourOtherAttributesBG =
-                [NSAttributedStringKey.foregroundColor: UIColor.colorWithHexString(corLetras),
-                 NSAttributedStringKey.font: UIFont(name: fonteGenerica, size: tamanhoMaior)!,
-                 NSAttributedStringKey.backgroundColor: UIColor.colorWithHexString(fundo_bg)]
+                [NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(corLetras),
+                 NSAttributedString.Key.font: UIFont(name: fonteGenerica, size: tamanhoMaior)!,
+                 NSAttributedString.Key.backgroundColor: UIColor.colorWithHexString(fundo_bg)]
         
 
         for v in versiculoSel {
             let partOne = NSMutableAttributedString(string: String(v.verso)
-                + " ", attributes: (yourAttributes as Any as! [NSAttributedStringKey : Any]))
+                + " ", attributes: (yourAttributes as Any as! [NSAttributedString.Key : Any]))
             
             let partTwo = NSMutableAttributedString(string: String(v.text),
-                                                    attributes: (yourOtherAttributes as Any as! [NSAttributedStringKey : Any]))
+                                                    attributes: (yourOtherAttributes as Any as! [NSAttributedString.Key : Any]))
             
             let partTwoBG = NSMutableAttributedString(string: String(v.text),
                             attributes: yourOtherAttributesBG )
@@ -1025,15 +1025,15 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
         paragraphStyle.lineHeightMultiple = 1
         
         let attString: NSMutableAttributedString! = combination
-        attString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attString.length))
+        attString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle as Any, range:NSMakeRange(0, attString.length))
         
         textView?.attributedText = attString
 
         tblNova.reloadData()
         
         //Fonte e tamanho do segmented control
-        let attr = NSDictionary(object: UIFont(name: fonteGenerica, size: tamanhoMaior)!, forKey: NSAttributedStringKey.font as NSCopying)
-        segment.setTitleTextAttributes(attr as [NSObject : AnyObject] , for: .normal)
+        let attr = NSDictionary(object: UIFont(name: fonteGenerica, size: tamanhoMaior)!, forKey: NSAttributedString.Key.font as NSCopying)
+        segment.setTitleTextAttributes((attr as [NSObject : AnyObject] as! [NSAttributedString.Key : Any]) , for: .normal)
 
     }
     
@@ -1136,3 +1136,8 @@ class ListaVersiculoViewController: UIViewController,UITextViewDelegate,UIPopove
        
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUITextDirection(_ input: Int) -> UITextDirection {
+	return UITextDirection(rawValue: input)
+}

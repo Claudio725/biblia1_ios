@@ -13,22 +13,8 @@ struct LivrosInfo {
     var name : String!
 }
 
-extension ListaLivrosViewController: UISearchBarDelegate {
-    // MARK: - UISearchBar Delegate
-    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
-    }
-    
-}
 
-extension ListaLivrosViewController: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}
-
-class ListaLivrosViewController: UITableViewController{
+class ListaLivrosViewController: UITableViewController, UISearchResultsUpdating{
     var livros: [LivrosInfo]!
     
     var selectedLivro: Int!
@@ -38,20 +24,13 @@ class ListaLivrosViewController: UITableViewController{
     var resultadoPesquisa: [LivrosInfo] = []
     
     @IBOutlet var searchFooter: SearchFooter!
-
-    lazy var searchController:UISearchController = ({
-        let controller = UISearchController(searchResultsController: nil) // 1
-        controller.hidesNavigationBarDuringPresentation = false // 2
-        controller.dimsBackgroundDuringPresentation = false // 3
-        controller.searchBar.searchBarStyle = .minimal // 4
-        controller.searchResultsUpdater = self // 5
-        controller.searchBar.placeholder = "Pesquisar Livros"
-        return controller
-    })()
     
     // MARK: IBOutlet Properties
     @IBOutlet weak var tblLivros: UITableView!
     let cellSpacingHeight: CGFloat = 5
+    
+    var filteredNFLTeams: [LivrosInfo]!
+    let searchController = UISearchController(searchResultsController: nil)
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +41,7 @@ class ListaLivrosViewController: UITableViewController{
         
         // Remove the title of the back button
         navigationItem.backBarButtonItem =
-            UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain,
+            UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain,
                             target: self, action: nil)
         
         //Back ground da tela
@@ -78,45 +57,26 @@ class ListaLivrosViewController: UITableViewController{
         self.tabBarController?.tabBar.items![2].isEnabled = false
         
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.delegate = self
-        
-    }
-    
-    
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        resultadoPesquisa = livros.filter({( livros : LivrosInfo) -> Bool in
-            let doesCategoryMatch = (scope == "All") || (livros.name == scope)
-            
-            if searchBarIsEmpty() {
-                return doesCategoryMatch
-            } else {
-                return doesCategoryMatch && livros.name.lowercased().contains(searchText.lowercased())
-            }
-        })
-        tblLivros.reloadData()
-    }
-    
-    func isFiltering() -> Bool {
-        let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
-        return searchController.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)
-    }
+        //searchController.searchBar.delegate = self
 
+        filteredNFLTeams = livros
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+
+    }
     
-    //Filtro de pesquisa
-    func filterContent(for searchText: String) {
-        resultadoPesquisa = livros.filter({ (livros) -> Bool in
-            if let name = livros.name {
-                let isMatch = name.localizedCaseInsensitiveContains(searchText)
-                return isMatch
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredNFLTeams = livros.filter { team in
+                return team.name.lowercased().contains(searchText.lowercased())
             }
             
-            return false
-        })
+        } else {
+            filteredNFLTeams = livros
+        }
+        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -136,23 +96,14 @@ class ListaLivrosViewController: UITableViewController{
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if (isFiltering()) {
-            searchFooter.setIsFilteringToShow(filteredItemCount: resultadoPesquisa.count, of: livros.count)
-            return resultadoPesquisa.count
-        }
-        searchFooter.setNotFiltering()
-        return livros.count
-        //return 1
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if (isFiltering()) {
-//            searchFooter.setIsFilteringToShow(filteredItemCount: resultadoPesquisa.count, of: livros.count)
-//            return resultadoPesquisa.count
-//        }
-//        searchFooter.setNotFiltering()
-//        return livros.count
-        return 1
+        guard let nflTeams = filteredNFLTeams else {
+            return 0
+        }
+        return nflTeams.count
     }
     
     // Set the spacing between sections
@@ -162,29 +113,24 @@ class ListaLivrosViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let livrocorrente: LivrosInfo
-        if isFiltering() {
-            livrocorrente = resultadoPesquisa[indexPath.section]
-        } else {
-            livrocorrente = livros[indexPath.section]
+        if let nflTeams = filteredNFLTeams {
+            let team = nflTeams[indexPath.row]
+            cell.textLabel!.text = team.name
+            
+            cell.textLabel?.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
+            cell.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
+            
+            // Rounded corners
+            cell.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
+            cell.layer.borderColor = UIColor.black.cgColor
+            cell.layer.borderWidth = 1
+            cell.layer.cornerRadius = 18
+            cell.clipsToBounds = true
+            
+            cell.textLabel?.font = UIFont(name: "BrandonGrotesque-Bold", size: 16)
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         }
         
-        //let livrocorrente = livros[indexPath.row]
-        
-        cell.textLabel?.text = livrocorrente.name
-        cell.textLabel?.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
-        cell.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
-        
-        // Rounded corners
-        cell.backgroundColor = UIColor.colorWithHexString("#f4f4ee")
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 18
-        cell.clipsToBounds = true
-        
-        cell.textLabel?.font = UIFont(name: "BrandonGrotesque-Bold", size: 16)
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-
         return cell
     }
     
@@ -208,11 +154,12 @@ class ListaLivrosViewController: UITableViewController{
             if identifier == "showCapitulos" {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let livro: LivrosInfo
-                    if isFiltering() {
-                        livro = resultadoPesquisa[indexPath.section]
-                    } else {
-                        livro = livros[indexPath.section]
-                    }
+//                    if isFiltering() {
+//                        livro = resultadoPesquisa[indexPath.section]
+//                    } else {
+//                        livro = livros[indexPath.section]
+//                    }
+                    livro = filteredNFLTeams[indexPath.section]
                     print (livro)
                     //let linha = indexPath.row
                     let CapitulosController = segue.destination as! CapitulosCollectionViewController
@@ -236,9 +183,9 @@ class ListaLivrosViewController: UITableViewController{
     }
     
     
-    override func willMove(toParentViewController parent: UIViewController?) {
+    override func willMove(toParent parent: UIViewController?) {
         searchController.isActive = false
-        super.willMove(toParentViewController: parent)
+        super.willMove(toParent: parent)
     }
 
 }

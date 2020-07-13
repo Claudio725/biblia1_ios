@@ -620,7 +620,7 @@ class DBManager: NSObject {
             
             if !database.executeStatements(sqlQuery) {
                 print("Falha na alteraçao de versículo do dia.")
-                print(database.lastError(), database.lastErrorMessage())
+                print(database.lastError() as Any, database.lastErrorMessage() as Any)
             } else {
                 database.commit()}
         }
@@ -675,7 +675,7 @@ class DBManager: NSObject {
             
             if !database.executeStatements(sqlQuery) {
                 print("Falha na alteração das preferências.")
-                print(database.lastError(), database.lastErrorMessage())
+                print(database.lastError() as Any, database.lastErrorMessage() as Any)
             } else {
                 database.commit()}
         }
@@ -760,7 +760,7 @@ class DBManager: NSObject {
             
             if !database.executeStatements(sqlQuery) {
                 print("Falha na alteraçao de versículo do dia.")
-                print(database.lastError(), database.lastErrorMessage())
+                print(database.lastError() as Any, database.lastErrorMessage() as Any)
             } else {
                 database.commit()}
         }
@@ -827,7 +827,7 @@ class DBManager: NSObject {
             
             if !database.executeStatements(sqlQuery) {
                 print("Falha na exclusão de marcação.")
-                print(database.lastError(), database.lastErrorMessage())
+                print(database.lastError() as Any, database.lastErrorMessage() as Any)
             } else {
                 database.commit()}
         }

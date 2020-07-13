@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FBSDKAppInviteDialogDelega
     }
 
     //Cor laranja no uinavigation
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //Pedir permissão para fazer Notificações
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
@@ -63,15 +63,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FBSDKAppInviteDialogDelega
         UITabBar.appearance().isTranslucent = false
         //UITabBar.appearance().barTintColor = UIColor.colorWithHexString("#9c9c9c") //background cinza
         UITabBar.appearance().tintColor = UIColor.white //cor dos itens em branco
-        let recentsItemImage = UIImage(named:"aberturanova.png")!.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        let recentsItemImage = UIImage(named:"aberturanova.png")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         UITabBar.appearance().backgroundImage = recentsItemImage
         UITabBar.appearance().clipsToBounds = true
 
 
         //Fonte negrito do titulo da barra de navegaçao
         let attrs = [
-            NSAttributedStringKey.foregroundColor: UIColor.white,
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 17)
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)
         ]
         
         UINavigationBar.appearance().titleTextAttributes = attrs
@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FBSDKAppInviteDialogDelega
                             let queryKeyValue = url!.query!.components(separatedBy: "&")
                             
                             for (index,element) in queryKeyValue.enumerated() {
-                                var kv = element.components(separatedBy: "=")
+                                let kv = element.components(separatedBy: "=")
                                 if(kv.count > 1) {
                                     if index == 0 {
                                         let livro = kv[1].components(separatedBy: "=")
@@ -189,14 +189,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FBSDKAppInviteDialogDelega
     
     func alerta(campo: String) {
         let alert:UIAlertController! = UIAlertController(title: "Biblia NVT", message: campo, preferredStyle: .alert)
-        let ok:UIAlertAction! = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        let ok:UIAlertAction! = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(ok)
         
         window?.rootViewController?.present(alert, animated: true, completion:nil)
     }
     
     
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         // pass the url to the handle deep link call
         Branch.getInstance().continue(userActivity);
         return true
@@ -222,7 +222,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FBSDKAppInviteDialogDelega
             let regex = try NSRegularExpression(pattern: searchTerm, options: .caseInsensitive)
             let range = NSRange(location: 0, length: targetString.utf16.count)
             for match in regex.matches(in: targetString, options: .withTransparentBounds, range: range) {
-                attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold), range: match.range)
+                attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold), range: match.range)
             }
             return attributedString
         } catch _ {
